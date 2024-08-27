@@ -8,6 +8,7 @@ import Hero from './Hero';
 import Nav from './Nav';
 import About from './About';
 import Proj from './PandR';
+import Notif from './Notif';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <Hero />
     <About />
     <Proj />
+    <Notif />
   </React.StrictMode>
 );
 
