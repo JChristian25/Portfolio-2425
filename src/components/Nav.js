@@ -7,10 +7,8 @@ function Nav() {
       <div className="flex items-center justify-center md:justify-between w-full px-4">
         {/* Logo and Contact Information */}
         <div className="flex flex-col md:mr-6 sm:text-center">
-          <h2
-            className="bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text 
-            text-transparent text-3xl font-extrabold font-mono text-center md:text-start"
-          >
+          <h2 className="bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text 
+            text-transparent text-3xl font-extrabold font-mono text-center md:text-start">
             JeyZ.dev
           </h2>
           <p

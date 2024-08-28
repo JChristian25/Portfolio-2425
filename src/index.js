@@ -3,21 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './input.css';
 import reportWebVitals from './reportWebVitals';
 
-
-import Hero from './Hero';
-import Nav from './Nav';
-import About from './About';
-import Proj from './PandR';
-import Notif from './Notif';
+import Hero from './App';
+import Nav from './components/Nav';
+import Notif from './components/Notification-Footer';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Nav />
     <Hero />
-    <About />
-    <Proj />
     <Notif />
+    <Footer />
   </React.StrictMode>
 );
 
