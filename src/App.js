@@ -2,6 +2,7 @@ import { FaReact, FaJava, FaHtml5, FaCss3Alt, FaBootstrap, FaPython, FaLinkedin,
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { motion, useScroll } from "framer-motion";
 
 import React from "react";
 
@@ -20,7 +21,7 @@ function Hero() {
       <div className="mockup-browser shadow-2xl bg-slate-950 w-[45vh] md:w-[70%] lg:w-[60%] xl:w-[50%] 
         lg:h-[38%] md:h-[34%] xl:h-[34%] h-[32vh]">
 
-        <div className="mockup-browser-toolbar border-b border-slate-800 pb-2">
+        <div className="block sm:hidden mockup-browser-toolbar border-b border-slate-800 pb-2">
           <div className="input">https://jclinaban.vercel.app</div>
         </div>
 
@@ -177,13 +178,18 @@ function Proj() {
 
 
 function App() {
+  const { scrollYProgress } = useScroll();
   return (
     <div className="App">
+      {/* Scroll Progress Indicator */}
+      <motion.div
+        className="fixed z-50 top-0 left-0 right-0 h-2 bg-gradient-to-r from-orange-600 to-yellow-500"
+        style={{ scaleX: scrollYProgress }}
+      />
       <Hero />
       <About />
       <Proj />
     </div>
   );
 }
-
 export default App;
