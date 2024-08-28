@@ -17,35 +17,33 @@ function Hero() {
     <div className="flex flex-col items-center justify-center h-screen 
         bg-gradient-to-tr from-slate-950 to-slate-800">
       
-      <div className="mockup-browser shadow-2xl bg-slate-950 md:w-[70%] lg:w-[60%] xl:w-[50%] 
-        lg:h-[40%] md:h-[38%] h-[34%]">
+      <div className="mockup-browser shadow-2xl bg-slate-950 w-[45vh] md:w-[70%] lg:w-[60%] xl:w-[50%] 
+        lg:h-[38%] md:h-[34%] xl:h-[34%] h-[32vh]">
 
         <div className="mockup-browser-toolbar border-b border-slate-800 pb-2">
           <div className="input">https://jclinaban.vercel.app</div>
         </div>
 
-        <div className="bg-slate-950 pt-4 flex flex-col items-center justify-center">
-          
-          <h1 className="text-lg md:text-2xl font-extrabold font-mono bg-gradient-to-r 
+        <div className="bg-slate-950 flex flex-col text-center items-center justify-center">
+              <h1 className="text-lg md:text-2xl font-extrabold font-mono bg-gradient-to-r 
             from-purple-500 to-cyan-400 bg-clip-text text-transparent">
-            Hello World! I am
-          </h1>
+                Hello World! I am
+              </h1>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold font-mono bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">
-            <span className="inline-block"> {/* Inline block to keep text and cursor together */}
-              {text}
-              <Cursor cursorBlinking="True" cursorStyle="|" cursorColor="white" />
-            </span>
-          </h1>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold font-mono bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">
+                <span className="inline-block"> {/* Inline block to keep text and cursor together */}
+                  {text}
+                  <Cursor cursorBlinking="True" cursorStyle="|" cursorColor="white" />
+                </span>
+              </h1>
 
-          <h1 className="text-base md:text-lg lg:text-2xl font-bold mt-2 font-mono text-slate-400">
-            a BSIT Freshman
-          </h1>
+              <h1 className="text-base md:text-lg lg:text-2xl font-bold mt-2 font-mono text-slate-400">
+                a BSIT Freshman
+              </h1>
 
-          <h1 className="text-sm md:text-lg font-bold font-mono text-slate-400">
-            at Polytechnic University of the Philippines
-          </h1>
-
+              <h1 className="text-sm md:text-lg font-bold font-mono text-slate-400">
+                at Polytechnic University of the Philippines
+              </h1>
         </div>
       </div>
 
