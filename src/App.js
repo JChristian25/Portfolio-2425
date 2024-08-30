@@ -36,6 +36,8 @@ import {
   NextjsOriginalWordmark,
   VscodeOriginal  
  } from 'devicons-react';
+ import myPict from './img/pic.jpg'
+
 
 import React from "react";
 
@@ -50,7 +52,6 @@ function Hero() {
   return (
     <div className="flex flex-col items-center justify-center h-screen 
         bg-gradient-to-tr from-slate-950 to-slate-800">
-      
       <div className="mockup-browser shadow-2xl bg-slate-950 w-[50vh] md:w-[70%] lg:w-[60%] xl:w-[50%] 
         lg:h-[38%] md:h-[34%] xl:h-[34%] h-[32vh]">
 
@@ -133,6 +134,15 @@ function About() {
         <h1 className="text-3xl md:text-4xl bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent
         font-mono font-extrabold">ABOUT ME</h1>
       </section>
+
+      <div className="flex flex-col items-center my-6">
+        <img 
+          src={myPict} 
+          alt="my picture" 
+          className="w-80 h-80 object-cover rounded-full shadow-lg border-4 border-white"
+        />
+      </div>
+
 
       {/* Bio Section */}
         <section className="flex flex-col items-center mb-4 px-4">
@@ -370,6 +380,7 @@ function Proj() {
         </div>
 
         <div className="flex flex-col w-[80%] h-[40%] bg-slate-950 my-2 rounded-lg shadow-xl p-6">
+          
           <section className="my-2 border-t-2 border-gray-400 py-4">
             <div className="flex flex-col md:flex-row items-start md:items-center">
               <span className="text-white bg-gradient-to-tr from-cyan-900 to-slate-800
