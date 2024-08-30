@@ -34,7 +34,7 @@ function Hero() {
     <div className="flex flex-col items-center justify-center h-screen 
         bg-gradient-to-tr from-slate-950 to-slate-800">
       
-      <div className="mockup-browser shadow-2xl bg-slate-950 w-[45vh] md:w-[70%] lg:w-[60%] xl:w-[50%] 
+      <div className="mockup-browser shadow-2xl bg-slate-950 w-[50vh] md:w-[70%] lg:w-[60%] xl:w-[50%] 
         lg:h-[38%] md:h-[34%] xl:h-[34%] h-[32vh]">
 
         <div className="block sm:hidden mockup-browser-toolbar border-b border-slate-800 pb-2">
@@ -120,72 +120,114 @@ function About() {
       </section>
       <div className="flex flex-col items-center justify-center space-y-6">
 
-        <div className="flex md:flex-nowrap sm:flex-wrap sm:justify-center rounded-lg shadow-xl p-2 bg-slate-950 w-[80%] md:w-[60%] sm:w-[95%] items-center">
-            <h2 className="text-xl md:text-xl bg-gradient-to-r 
-            from-purple-500 to-cyan-400 bg-clip-text text-transparent
-            font-mono font-extrabold m-6">Skill & Technologies</h2>
-            <div className="flex flex-col">
-              <ul className="flex flex-wrap items-center gap-4 m-2">
-                Programming
-                {[
-                    <FaPython />, <FaJava />
-                  ].map((Icon, index) => (
-                    <li key={index} className="flex items-center justify-center">
-                      {React.cloneElement(Icon, { size: 48, color: "white" })}
-                    </li>
-                ))}
-              </ul>
-              <ul className="flex flex-wrap items-center gap-6 m-2">
-                Web Development
-                {[
-                    <FaHtml5 />, <FaCss3Alt />, <IoLogoJavascript />,
-                    <FaReact />, <RiTailwindCssFill />, <FaBootstrap/>
-                  ].map((Icon, index) => (
-                    <li key={index} className="flex items-center justify-center">
-                      {React.cloneElement(Icon, { size: 48, color: "white" })}
-                    </li>
-                ))}
-              </ul>   
-            </div>
+        <div className="flex flex-col md:flex-row rounded-lg shadow-xl p-4 bg-slate-950 w-[95%] md:w-[80%] items-center">
+          <h2 className="text-xl md:text-xl bg-gradient-to-r 
+              from-purple-500 to-cyan-400 bg-clip-text text-transparent
+              font-mono font-extrabold m-6">Skill & Technologies</h2>
+          <div className="flex flex-col">
+            <ul className="flex flex-wrap items-center gap-4 m-2">
+              <span className="font-bold text-white">Programming</span>
+              {[
+                <FaPython />, <FaJava />
+              ].map((Icon, index) => (
+                <li key={index} className="flex items-center justify-center">
+                  {React.cloneElement(Icon, { size: 48, color: "white" })}
+                </li>
+              ))}
+            </ul>
+            <ul className="flex flex-wrap items-center gap-6 m-2">
+              <span className="font-bold text-white">Web Development</span>
+              {[
+                <FaHtml5 />, <FaCss3Alt />, <IoLogoJavascript />,
+                <FaReact />, <RiTailwindCssFill />, <FaBootstrap/>
+              ].map((Icon, index) => (
+                <li key={index} className="flex items-center justify-center">
+                  {React.cloneElement(Icon, { size: 48, color: "white" })}
+                </li>
+              ))}
+            </ul>   
           </div>
+        </div>
 
-        <div className="flex md:flex-nowrap sm:flex-wrap sm:justify-center rounded-lg shadow-xl p-2 bg-slate-950 w-[80%] md:w-[60%] sm:w-[95%] items-center">
-          <h2 className="text-xl md:text-xl
-          bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text
-          text-transparent font-mono font-extrabold m-6">Experience</h2>
-          <div className="md:pl-10">
-            <ul className="flex flex-wrap items-center list-disc m-2 text-gray-400">
-              <h3 className="md:text-xl sm:text-lg bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent
-              font-mono font-extrabold">Commission on Audit | Information Technology Office (Intern)</h3>
-              <h4 className="md:text-lg sm:text-sm text-white font-mono font-bold">February 2024 - March 2024</h4>
-              <li>Assisted on the Development of OJT Information Management System.</li>
+
+        <div className="flex flex-col md:flex-row rounded-lg shadow-xl p-4 bg-slate-950 w-[95%] md:w-[80%] items-center">
+          <h2 className="
+          text-xl md:text-xl bg-gradient-to-r 
+              from-purple-500 to-cyan-400 bg-clip-text text-transparent
+              font-mono font-extrabold m-6">
+            Experience
+          </h2>
+          <div className="flex-1 md:pl-10">
+            <ul className="text-gray-400 font-mono">
+              <h3 className="md:text-xl sm:text-lg bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent font-mono font-extrabold">
+                Commission on Audit | Information Technology Office (Intern)
+              </h3>
+              <h4 className="md:text-lg sm:text-sm text-white font-mono font-bold">
+                February 2024 - March 2024
+              </h4>
+              <li>* Assisted on the Development of OJT Information Management System.</li>
               <li>
-              Upgraded the platform of sites for enhanced security. Including
-              the migration of data from old to new site, and also updating
-              the looks of the site:
-                  <ul className="list-decimal list-inside lg:indent-4 indent-0">
-                    <li>https://web.coa.gov.ph/iaro/</li>
-                    <li>https://web.coa.gov.ph/sdg/</li>
-                    <li>https://web.coa.gov.ph/imp/</li>
-                    <li>https://web.coa.gov.ph/praise/</li>
-                  </ul>
+                * Upgraded the platform of sites for enhanced security, including migrating data from the old to the new site and updating the site’s design:
+                <ul className="text-cyan-700 lg:indent-4 indent-2">
+                  <li><a href="https://web.coa.gov.ph/iaro/">https://web.coa.gov.ph/iaro/</a></li>
+                  <li><a href="https://web.coa.gov.ph/sdg/">https://web.coa.gov.ph/sdg/</a></li>
+                  <li><a href="https://web.coa.gov.ph/imp/">https://web.coa.gov.ph/imp/</a></li>
+                  <li><a href="https://web.coa.gov.ph/praise/">https://web.coa.gov.ph/praise/</a></li>
+                </ul>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="flex md:flex-nowrap sm:flex-wrap sm:justify-center rounded-lg shadow-xl p-2 bg-slate-950 w-[80%] md:w-[60%] sm:w-[95%] items-center">
+
+        <div className="flex flex-col md:flex-row rounded-lg shadow-xl p-4 bg-slate-950 w-[95%] md:w-[80%] items-center">
           <h2 className="text-xl md:text-xl bg-gradient-to-r 
-            from-purple-500 to-cyan-400 bg-clip-text text-transparent
-            font-mono font-extrabold m-6">Education</h2>
-              aoefjaopj
+              from-purple-500 to-cyan-400 bg-clip-text text-transparent
+              font-mono font-extrabold m-6">
+            Education
+          </h2>
+          <div className="flex-1">
+            <div className="flex-1 md:pl-10">
+              <h3 className="md:text-xl sm:text-lg bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent font-mono font-extrabold">Holy Spirit National High School</h3>
+              <h4 className="md:text-lg sm:text-sm text-white font-mono font-semibold">2022-2024 (Grade XI & XII)</h4>
+              <p className="md:text-base sm:text-sm text-gray-400 font-mono font-light">
+                <i>Graduated with Honors, Best Presenter in Student Open Academic
+                Research (SOAR), Awardee in Work Immersion, Awardee for Innovation.</i> 
+              </p>
+              
+              <hr className="w-[100%] h-1 my-4 bg-gray-200 border-0 rounded dark:bg-gray-700" />
+              
+              <h3 className="md:text-xl sm:text-lg bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent font-mono font-extrabold  ">Garden of Life School</h3>
+              <h4 className="md:text-lg sm:text-sm text-white font-mono font-semibold">2028-2021 (Grade VII - X)</h4>
+              <p className="md:text-base sm:text-sm text-gray-400 font-mono font-light">
+                <i>Graduated with Honors.</i>
+              </p>
+
+            </div>
+          </div>
         </div>
 
-        <div className="flex md:flex-nowrap sm:flex-wrap sm:justify-center rounded-lg shadow-xl p-2 bg-slate-950 w-[80%] md:w-[60%] sm:w-[95%] items-center">
-          <h2 className="text-xl md:text-xl
-          bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text text-transparent font-mono font-extrabold m-6">Certifications</h2>
-              aoefjaopj
+        <div className="flex flex-col md:flex-row rounded-lg shadow-xl p-4 bg-slate-950 w-[95%] md:w-[80%] items-center">
+          <h2 className="text-xl md:text-xl bg-gradient-to-r 
+              from-purple-500 to-cyan-400 bg-clip-text text-transparent
+              font-mono font-extrabold m-6">
+            Certifications
+          </h2>
+          <div className="flex-1">
+            <div className="flex-1 md:pl-10">  
+              <ul className="flex md:items-start sm:items-center flex-col">
+                <li><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/04464f492056d29bed756fa1ae58b7de2f3fff72">DATACAMP - INTRODUCTION TO PYTHON</a></li>
+                <li><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/041e787d4faf44f39016313dc72a213137c9a306">DATACAMP - INTERMEDIATE  PYTHON</a></li>
+                <li><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/1e3c12c1c946cc2672e3cc678673fbd259f453d6">DATACAMP - WEBSCRAPING IN PYTHON</a></li>
+                <li><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/cccfea077835b160d83ba8c4607c0a291fd44ffd">DATACAMP - DATA MANIPULATION WITH PANDAS</a></li>
+                <li><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/1f2b714a69218dbd94af5d4d36820e6a5eb9d6f1">DATACAMP - INTRODUCTION TO CHATGPT</a></li>
+                <li><a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/0733066b479ac4e88d7063b9179b7c32a4744aa4">DATACAMP - UNDERSTANDING PROMPT ENGINEERING</a></li>
+              </ul>
+              <p className="text-gray-400 text-sm text-center mt-2">More to come ^^</p>
+            </div>
+          </div>
         </div>
+
 
       </div>
 
