@@ -1,10 +1,4 @@
 import { 
-  FaReact,
-  FaJava, 
-  FaHtml5, 
-  FaCss3Alt, 
-  FaBootstrap, 
-  FaPython, 
   FaLinkedin, 
   FaFacebook, 
   FaGithub
@@ -13,12 +7,35 @@ import {
   useTypewriter,
   Cursor
 } from "react-simple-typewriter";
-import { IoLogoJavascript } from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
 import { 
   motion,
   useScroll
 } from "framer-motion";
+import { 
+  COriginal,
+  ReactOriginalWordmark,
+  Html5OriginalWordmark,
+  BootstrapOriginalWordmark,
+  Css3OriginalWordmark,
+  JavaOriginalWordmark,
+  JavascriptOriginal,
+  GithubOriginalWordmark,
+  VisualbasicOriginal,
+  VisualstudioOriginal,
+  PandasPlainWordmark,
+  DotnetcorePlain,
+  PythonOriginalWordmark,
+  FlutterOriginal,
+  TailwindcssPlainWordmark,
+  MicrosoftsqlserverOriginalWordmark,
+  MatplotlibPlainWordmark,
+  CsharpOriginal,
+  WordpressOriginal,
+  CanvaOriginal,
+  JqueryOriginalWordmark,
+  NextjsOriginalWordmark,
+  VscodeOriginal  
+ } from 'devicons-react';
 
 import React from "react";
 
@@ -109,44 +126,92 @@ function Hero() {
 
 function About() {
   return (
-    <div
-      id="about-me"
-      className="flex flex-col bg-gradient-to-tr from-slate-950 to-slate-800 px-4 py-8"
-    >
+    <div id="about-me"
+      className="flex flex-col bg-gradient-to-tr from-slate-950 to-slate-800 px-4 py-4">
       {/* Section Title */}
-      <section className="text-center mb-8">
+      <section className="text-center">
         <h1 className="text-3xl md:text-4xl bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent
         font-mono font-extrabold">ABOUT ME</h1>
       </section>
-      <div className="flex flex-col items-center justify-center space-y-6">
 
-        <div className="flex flex-col md:flex-row rounded-lg shadow-xl p-4 bg-slate-950 w-[95%] md:w-[80%] items-center">
+      {/* Bio Section */}
+        <section className="flex flex-col items-center mb-4 px-4">
+          <hr className="w-2/3 h-1 my-4 bg-gray-200 border-0 rounded dark:bg-gray-700" />
+          <h2 className="text-xl md:text-2xl bg-gradient-to-r from-orange-600 to-yellow-500 
+              bg-clip-text text-transparent
+              font-mono font-extrabold mb-4">A Short Bio...</h2>
+          <div className="max-w-2xl mx-auto">
+            <p className="text-gray-400 md:text-lg text-justify indent-4 font-mono">
+              I'm currently pursuing a Bachelor's degree in Information Technology. My journey began when I was 9 years old and first discovered programming with Visual Basic 6.0. I immediately fell in love with it! Learning how to create programs was fascinating to me, and it sparked my curiosity to explore more. Over time, I learned various programming languages and technologies. 
+
+              However, I eventually stopped actively learning programming around the age of 13, and only dabbled in it occasionally. Then, during my Work Immersion in Senior High School, my passion for programming was reignited. I resumed my studies in programming and everything related to computer science, and now I'm learning at a faster pace than ever before!
+            </p>
+          </div>
+            <hr className="w-2/3 h-1 my-4 bg-gray-200 border-0 rounded dark:bg-gray-700" />
+        </section>
+
+      <div className="flex flex-col items-center justify-center space-y-6 mb-8">
+
+        <div className="flex flex-col md:flex-row rounded-lg shadow-xl p-4  bg-slate-950 w-[95%] md:w-[80%] items-center">
           <h2 className="text-xl md:text-xl bg-gradient-to-r 
               from-purple-500 to-cyan-400 bg-clip-text text-transparent
               font-mono font-extrabold m-6">Skill & Technologies</h2>
           <div className="flex flex-col">
-            <ul className="flex flex-wrap items-center gap-4 m-2">
-              <span className="font-bold text-white">Programming</span>
+            {/* Programming Section */}
+            
+            <h3 className="font-bold bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent text-center">Programming</h3>
+            <ul className="flex flex-wrap items-center justify-center gap-4 m-4">
               {[
-                <FaPython />, <FaJava />
+                <COriginal />, <CsharpOriginal />, <JavaOriginalWordmark />, <VisualbasicOriginal />,
+                <MicrosoftsqlserverOriginalWordmark />, <PythonOriginalWordmark />,
+                <PandasPlainWordmark />, <MatplotlibPlainWordmark />, <FlutterOriginal />,
+                <GithubOriginalWordmark />
               ].map((Icon, index) => (
-                <li key={index} className="flex items-center justify-center">
-                  {React.cloneElement(Icon, { size: 48, color: "white" })}
+                <li
+                  key={index}
+                  className="flex flex-col items-center justify-center bg-gradient-to-tr from-slate-600 to-slate-800 p-2 rounded-xl hover:scale-105 hover:shadow-lg transition-transform"
+                >
+                  {React.cloneElement(Icon, { size: 56 })}
                 </li>
               ))}
             </ul>
-            <ul className="flex flex-wrap items-center gap-6 m-2">
-              <span className="font-bold text-white">Web Development</span>
+
+            {/* Web Development Section */}
+            <h3 className="font-bold bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent text-center">Web Development</h3>
+            <ul className="flex flex-wrap items-center justify-center gap-4 m-4">
               {[
-                <FaHtml5 />, <FaCss3Alt />, <IoLogoJavascript />,
-                <FaReact />, <RiTailwindCssFill />, <FaBootstrap/>
+                <Html5OriginalWordmark />, <Css3OriginalWordmark />,
+                <JavascriptOriginal />, <BootstrapOriginalWordmark />,
+                <JqueryOriginalWordmark />, <TailwindcssPlainWordmark />,
+                <ReactOriginalWordmark />, <NextjsOriginalWordmark />,
+                <WordpressOriginal />, <DotnetcorePlain />
               ].map((Icon, index) => (
-                <li key={index} className="flex items-center justify-center">
-                  {React.cloneElement(Icon, { size: 48, color: "white" })}
+                <li
+                  key={index}
+                  className="flex flex-col items-center justify-center bg-gradient-to-tr from-slate-600 to-slate-800 p-2 rounded-xl hover:scale-105 hover:shadow-lg transition-transform"
+                >
+                  {React.cloneElement(Icon, { size: 56 })}
                 </li>
               ))}
-            </ul>   
+            </ul>
+
+            {/* Other Tools Section */}
+            <h3 className="font-bold bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent text-center">Other Tools</h3>
+            <ul className="flex flex-wrap items-center justify-center gap-4 m-4">
+              {[
+                <GithubOriginalWordmark />, <CanvaOriginal />,
+                <VisualstudioOriginal />, <VscodeOriginal />
+              ].map((Icon, index) => (
+                <li
+                  key={index}
+                  className="flex flex-col items-center justify-center bg-gradient-to-tr from-slate-600 to-slate-800 p-2 rounded-xl hover:scale-105 hover:shadow-lg transition-transform"
+                >
+                  {React.cloneElement(Icon, { size: 56 })}
+                </li>
+              ))}
+            </ul>
           </div>
+
         </div>
 
 
@@ -227,24 +292,7 @@ function About() {
             </div>
           </div>
         </div>
-
-
       </div>
-
-      {/* Bio Section */}
-      <section className="flex flex-col items-center mt-8 px-4">
-        <hr className="w-2/3 h-1 my-4 bg-gray-200 border-0 rounded dark:bg-gray-700" />
-        <h2 className="text-xl md:text-2xl bg-gradient-to-r from-orange-600 to-yellow-500 
-            bg-clip-text text-transparent
-            font-mono font-extrabold mb-4">A Short Bio...</h2>
-        <div className="max-w-2xl mx-auto">
-          <p className="text-gray-400 md:text-lg text-justify indent-4 font-mono">
-            I'm currently pursuing a Bachelor's degree in Information Technology. My journey began when I was 9 years old and first discovered programming with Visual Basic 6.0. I immediately fell in love with it! Learning how to create programs was fascinating to me, and it sparked my curiosity to explore more. Over time, I learned various programming languages and technologies. 
-
-            However, I eventually stopped actively learning programming around the age of 13, and only dabbled in it occasionally. Then, during my Work Immersion in Senior High School, my passion for programming was reignited. I resumed my studies in programming and everything related to computer science, and now I'm learning at a faster pace than ever before!
-          </p>
-        </div>
-      </section>
     </div>
   );
 }
@@ -252,14 +300,101 @@ function About() {
 function Proj() {
   return (
     <div id="proj" className="bg-gradient-to-br from-slate-950 to-slate-800 min-h-screen">
-      <section className="text-center mb-8 px-4 py-8">
+      <section className="text-center mb-2 px-4 py-2">
           <h1 className="text-3xl md:text-4xl bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent
           font-mono font-extrabold">
             PROJECTS & RESEARCH
           </h1>
       </section>
-      <div className="flex items-center justify-center">
-        <h2 className="text-xl text-white font-mono">(Placeholder)</h2>
+      <div className="flex flex-col items-center justify-center">
+
+        <div className="flex flex-col w-[80%] h-[40%] bg-slate-950 my-2 rounded-lg shadow-xl p-6">
+          <section className="my-2 border-t-2 border-gray-400 py-4">
+            <div className="flex flex-col md:flex-row items-start md:items-center">
+              <span className="text-white bg-gradient-to-tr from-cyan-900 to-slate-800 p-2 rounded-md font-mono font-bold">Project</span>
+              <h2 className="font-mono text-xl font-bold ml-0 md:ml-4 mt-2 md:mt-0 bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">
+                QRID-SAMS: Quick Response Code ID-based Student Attendance 
+                Monitoring System 
+              </h2>
+              <h3 className="font-mono text-sm font-bold md:text-center">
+                 January 2024 – May 2024
+              </h3>
+            </div>
+            <div className="md:ml-24">
+              <p className="font-mono text-sm md:text-base">
+                * Designed and implemented modules including Dashboard, 
+                Scanner, Students, Report, Attendance, and Administrator.
+              </p>
+              <p className="font-mono text-sm md:text-base">  
+                * Utilized ClosedXML for report generation and integrated the 
+                  html5-qrcode API for the scanner. 
+              </p>
+              <p className="font-mono text-sm md:text-base">  
+                * Achieved 100% satisfaction from 35 participants, who found 
+                the system more accurate and efficient than manual 
+                attendance checking. 
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div className="flex flex-col w-[80%] h-[40%] bg-slate-950 my-2 rounded-lg shadow-xl p-6">
+          <section className="my-2 border-t-2 border-gray-400 py-4">
+            <div className="flex flex-col md:flex-row items-start md:items-center">
+              <span className="text-white bg-gradient-to-tr from-cyan-900 to-slate-800
+               p-2 rounded-md font-mono font-bold">Research</span>
+              <h2 className="font-mono text-xl font-bold ml-0 md:ml-4 mt-2 md:mt-0 bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">
+                The Relationship between Teachers’ Voice Quality and Attention of 
+                Grade 11 Students
+              </h2>
+              <h3 className="font-mono text-sm font-bold md:text-center">
+                Research Leader
+              </h3>
+            </div>
+            <div className="md:ml-24">
+              <p className="font-mono text-sm md:text-base">
+                * Conducted a comprehensive literature review to develop a 
+              strong research methodology.
+              </p>
+              <p className="font-mono text-sm md:text-base">  
+                * Analyzed teachers’ voice quality using Praat speech analysis 
+              software, focusing on variables such as pitch, tempo, fluency, 
+              and volume.
+              </p>
+              <p className="font-mono text-sm md:text-base">  
+                * Performed data analysis using Excel to calculate correlations 
+              between voice quality and student attention. 
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div className="flex flex-col w-[80%] h-[40%] bg-slate-950 my-2 rounded-lg shadow-xl p-6">
+          <section className="my-2 border-t-2 border-gray-400 py-4">
+            <div className="flex flex-col md:flex-row items-start md:items-center">
+              <span className="text-white bg-gradient-to-tr from-cyan-900 to-slate-800
+               p-2 rounded-md font-mono font-bold">Research</span>
+              <h2 className="font-mono text-xl font-bold ml-0 md:ml-4 mt-2 md:mt-0 bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">
+                Development of QRID-based Attendance as perceived by the Senior 
+                High School Students
+              </h2>
+              <h3 className="font-mono text-sm font-bold md:text-center">
+                Research Leader/System Designer/Programmer
+              </h3>
+            </div>
+            <div className="md:ml-24">
+              <p className="font-mono text-sm md:text-base">
+                * Developed a working QRID System using ASP.Net to track 
+              student attendance.
+              </p>
+              <p className="font-mono text-sm md:text-base">  
+                * Conducted user experience testing and incorporated 
+              feedback to enhance system functionality. 
+              </p>
+            </div>
+          </section>
+        </div>
+        
       </div>
     </div>
   );
