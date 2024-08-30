@@ -40,7 +40,6 @@ import {
 
 
 import React from "react";
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 function Hero() {
@@ -54,7 +53,6 @@ function Hero() {
   return (
     <div className="flex flex-col items-center justify-center h-screen 
         bg-gradient-to-tr from-slate-950 to-slate-800">
-      <SpeedInsights/>
       <div className="mockup-browser shadow-2xl bg-slate-950 w-[50vh] md:w-[70%] lg:w-[60%] xl:w-[50%] 
         lg:h-[38%] md:h-[34%] xl:h-[34%] h-[32vh]">
 
