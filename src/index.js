@@ -8,8 +8,6 @@ import Nav from './components/Nav';
 import Notif from './components/Notification-Footer';
 import Footer from './components/Footer';
 
-import { SpeedInsights } from "@vercel/speed-insights/react"
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -17,7 +15,6 @@ root.render(
     <Hero />
     <Notif />
     <Footer />
-    <SpeedInsights />
   </React.StrictMode>
 );
 

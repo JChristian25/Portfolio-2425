@@ -36,11 +36,9 @@ import {
   NextjsOriginalWordmark,
   VscodeOriginal  
  } from 'devicons-react';
- import myPict from './img/pic.jpg'
+import myPict from './img/pic.jpg'
 
-
-import React from "react";
-
+import React from 'react';
 
 function Hero() {
   const [text] = useTypewriter({
@@ -143,7 +141,6 @@ function About() {
           className="w-80 h-80 object-cover rounded-full shadow-lg border-4 border-white"
         />
       </div>
-
 
       {/* Bio Section */}
         <section className="flex flex-col items-center mb-4 px-4">
