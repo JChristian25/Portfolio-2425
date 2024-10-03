@@ -108,7 +108,7 @@ function Hero() {
           </li>
           <li className="bg-slate-950 shadow-md rounded-3xl hover:bg-orange-600 hover:rounded-xl 
             transition-all p-3 md:p-4">
-            <a href="https://www.linkedin.com/in/john-christian-linaban-9073a7316/">
+            <a href="https://www.linkedin.com/in/jclinaban">
               <FaLinkedin size="32" color="white" />
             </a>
           </li>
